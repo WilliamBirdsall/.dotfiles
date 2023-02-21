@@ -5,5 +5,5 @@ selected=$(echo "$langs" | fzf)
 
 read -p "Enter query: " query
 
-tmux split-window -v bash -c "curl cht.sh/$selected/$(echo "$query" | tr " " "+") | less"
+tmux split-window -v bash -c "curl -s cht.sh/$selected/$(echo "$query" | tr " " "+") | less"
 
