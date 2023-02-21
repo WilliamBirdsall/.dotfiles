@@ -2,7 +2,7 @@
 export PSHOST="willbirdsall.com"
 
 # Path Edits
-export PATH=$PATH:~/Projects/snippets/workflow/tmux-sessionizer.sh
+export PATH=$PATH:~/Projects/.dotfiles/bin/.local/scripts
 
 # Misc. Alias's
 alias sshps="ssh $PSHOST"
@@ -28,6 +28,9 @@ alias lla="ls -alh"
 
 # Quick Launch tmux-sessionizer
 bindkey -s ^f "tmux-sessionizer.sh\n"
+
+# Quick Launch cht.sh
+bindkey -s ^s "cht.sh"
 
 PROMPT="%F{069}%n%f%F{0159}@%f%F{069}%m%f%F{159}:%f%F{049}[%~]%f%F{159}$%f "
 
