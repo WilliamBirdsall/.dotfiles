@@ -18,8 +18,8 @@ alias gc="git commit"
 alias gp="git push"
 alias gpl="git pull"
 alias gs="git status"
-alias gmm="git merge master"
-alias gcm="git checkout master"
+alias gmm="git merge main"
+alias gcm="git checkout main"
 
 # Listing Alias's
 alias ls="ls --color"
