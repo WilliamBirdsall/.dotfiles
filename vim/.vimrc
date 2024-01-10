@@ -21,6 +21,7 @@ colorscheme gruvbox
 syntax on
 
 let mapleader = " "
+
 nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <Leader>f :%s/\<\|\>\@!\s\|\n//g<CR>
 nnoremap <Leader>r :s/
@@ -45,6 +46,19 @@ endfun
 augroup PERSONAL_ACS
 	    autocmd!
 	        autocmd BufWritePre * :call TrimWhitespace()
+augroup END
+
+" Use actual tabs for make files
+fun! SetMakefileOptions()
+    if &filetype == 'make'
+        setlocal noexpandtab
+        setlocal tabstop=8
+    endif
+endfun
+
+augroup makefile_settings
+    autocmd!
+        autocmd FileType make call SetMakefileOptions()
 augroup END
 
 " COC Configuration
