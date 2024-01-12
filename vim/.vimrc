@@ -52,7 +52,8 @@ augroup END
 fun! SetMakefileOptions()
     if &filetype == 'make'
         setlocal noexpandtab
-        setlocal tabstop=8
+        setlocal tabstop=4
+        setlocal shiftwidth=4
     endif
 endfun
 
