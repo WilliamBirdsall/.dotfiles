@@ -1,0 +1,15 @@
+- name: Install bat
+  package: name=bat state=latest
+- name: Install Git
+  package: name=git state=latest
+- name: Install Neovim
+  package: name=neovim state=latest
+- name: Install Nodejs
+  package: name=nodejs state=latest
+- name: Install Npm
+  name: name=npm state=latest
+- name: Install Tmux
+  package: name=tmux state=latest
+- name: Install Shell (Zsh)
+  package: name=zsh state=latest
+

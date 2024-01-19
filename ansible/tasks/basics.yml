@@ -1,0 +1,4 @@
+- name: Change Shell
+  ansible.builtin.shell: chsh -s `which zsh`
+- name: Create Projects Dir
+  ansible.builtin.shell: mkdir ~/Projects

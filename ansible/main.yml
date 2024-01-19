@@ -1,0 +1,7 @@
+- name: Setup Playbook
+  hosts: localhost
+  tasks:
+  - include: tasks/installs.yml
+  - include: tasks/basics.yml
+  - include: tasks/configs.yml
+
