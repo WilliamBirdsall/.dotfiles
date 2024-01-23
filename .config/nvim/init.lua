@@ -11,6 +11,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(
-  {{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}}
-)
+require("lazy").setup({
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 }
+})
+
+require("gruvbox").setup({
+	italic = {
+		strings = false
+	}
+})
+
+vim.o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
