@@ -10,6 +10,7 @@ alias sshps="ssh $PSHOST"
 # Program Alias's
 alias cat="bat"
 alias vi="vim"
+alias vim="nvim"
 
 # Git Alias's
 alias gd="git diff --color-moved"
