@@ -8,7 +8,12 @@ require("lazy").setup({
       vim.cmd([[colorscheme gruvbox]])
     end,
   },
-  { "junegunn/fzf", build = "./install --all" }
+  { "junegunn/fzf", build = "./install --all" },
+  {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
 })
 
 require("gruvbox").setup({
@@ -24,3 +29,8 @@ require("nvim-treesitter.configs").setup({
     enable = true,
   }
 })
+
+require("mason").setup()
+require("mason-lspconfig").setup {
+  ensure_installed = {"cssls", "emmet_language_server", "html", "intelephense", "rust_analyzer", "tsserver"},
+}
