@@ -12,8 +12,8 @@ require("lazy").setup({
   {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-  }
+    "neovim/nvim-lspconfig"
+  },
 })
 
 require("gruvbox").setup({
@@ -31,6 +31,14 @@ require("nvim-treesitter.configs").setup({
 })
 
 require("mason").setup()
-require("mason-lspconfig").setup {
-  ensure_installed = {"cssls", "emmet_language_server", "html", "intelephense", "rust_analyzer", "tsserver"},
-}
+require("mason-lspconfig").setup({
+  ensure_installed = {"cssls", "emmet_language_server", "html", "intelephense", "lua_ls", "rust_analyzer", "tsserver"},
+})
+
+require("lspconfig").cssls.setup {}
+require("lspconfig").emmet_language_server.setup {}
+require("lspconfig").html.setup {}
+require("lspconfig").intelephense.setup {}
+require("lspconfig").lua_ls.setup {}
+require("lspconfig").rust_analyzer.setup {}
+require("lspconfig").tsserver.setup {}
