@@ -52,7 +52,19 @@ require("lazy").setup({
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.cssls.setup({})
-      lspconfig.emmet_language_server.setup({})
+      lspconfig.emmet_language_server.setup({
+        filetypes = {
+          "css",
+          "html",
+          "less",
+          "njk",
+          "php",
+          "pug",
+          "sass",
+          "scss",
+          "twig"
+        }
+      })
       lspconfig.html.setup({})
       lspconfig.intelephense.setup({})
       lspconfig.lua_ls.setup({})
