@@ -3,8 +3,8 @@ import = [
 ]
 
 [window]
+startup_mode = "Maximized"
 decorations = "None"
-dimensions = { columns = 191, lines = 43 }
 padding = { x = 5, y = 5 }
 
 [font]
@@ -24,5 +24,5 @@ style = "Italic"
 
 [font.normal]
 family = "JetBrains Mono"
-style = "Normal"
+style = "Regular"
 
