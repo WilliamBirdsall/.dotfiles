@@ -15,7 +15,7 @@ set incsearch
 set colorcolumn=80
 set nrformats-=octal
 set bg=dark
-set signcolumn=yes
+set signcolumn="yes"
 set cursorline
 
 colorscheme gruvbox
