@@ -12,10 +12,11 @@ set smartindent
 set scrolloff=10
 set nowrap
 set incsearch
-set signcolumn=yes
 set colorcolumn=80
 set nrformats-=octal
 set bg=dark
+set signcolumn="yes"
+set cursorline
 
 colorscheme gruvbox
 syntax on

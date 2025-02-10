@@ -32,6 +32,14 @@ require("lazy").setup({
   -- Fuzzy Finder
   { "junegunn/fzf", build = "./install --all" },
 
+  -- Git Signs
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require('gitsigns').setup()
+    end
+  },
+
   -- LSP Management
   {
     "williamboman/mason.nvim",
