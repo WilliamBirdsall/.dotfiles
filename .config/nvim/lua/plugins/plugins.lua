@@ -51,7 +51,7 @@ require("lazy").setup({
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"cssls", "emmet_language_server", "html", "intelephense", "lua_ls", "rust_analyzer", "tsserver"},
+        ensure_installed = {"cssls", "emmet_language_server", "html", "intelephense", "lua_ls", "rust_analyzer", "ts_ls"},
       })
     end
   },
