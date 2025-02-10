@@ -47,3 +47,6 @@ PROMPT="%F{069}%n%f%F{0159}@%f%F{069}%m%f%F{159}:%f%F{049}[%~]%f%F{159}$%f "
 zstyle ':completion:*' list-colors 'di=1;34;'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
