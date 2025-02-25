@@ -1,6 +1,9 @@
 -- Remap leader to space
 vim.g.mapleader = " "
 
+-- Quick access to NerdTree
+vim.keymap.set('n', '<Leader><tab>', ':<C-u>NERDTreeFocus<CR>')
+
 -- Quick access to FZF
 vim.keymap.set('n', '<C-p>', ':<C-u>FZF<CR>')
 

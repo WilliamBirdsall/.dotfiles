@@ -29,6 +29,9 @@ require("lazy").setup({
     end
   },
 
+  -- File System Explorer
+  {"preservim/nerdtree"},
+
   -- Fuzzy Finder
   { "junegunn/fzf", build = "./install --all" },
 
