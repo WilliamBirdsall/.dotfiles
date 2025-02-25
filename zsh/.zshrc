@@ -1,13 +1,14 @@
 # Environment Variables
 export PSHOST="willbirdsall.com"
 export NVM_DIR="$HOME/.nvm"
+
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+
+# Completion Setup
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-#IF
-export LAGOON_SSH_PRIVATE_KEY=$(cat ~/.ssh/id_ed25519)
-alias lrs="yes | lando destroy && yes | docker system prune -a && lando start"
-alias lpd="lando drush sql-sync @lagoon.balt02-f2-live @self -y"
+# Tmux Session Bash Scripts
+alias devps="$HOME/.local/bin/pstmux && tmux a"
 
 # Path Edits
 export PATH=$PATH:~/Projects/.dotfiles/bin/.local/scripts

@@ -5,7 +5,7 @@ require("lazy").setup({
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = {"c", "css", "html", "javascript", "lua", "markdown", "php", "rust", "toml" },
+        ensure_installed = {"c", "css", "html", "javascript", "lua", "markdown", "php", "rust", "toml", "typescript" },
         sync_install = false,
         highlight = {
           enable = true,
@@ -51,7 +51,7 @@ require("lazy").setup({
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"cssls", "emmet_language_server", "html", "intelephense", "lua_ls", "rust_analyzer", "ts_ls"},
+        ensure_installed = {"cssls", "denols", "emmet_language_server", "html", "intelephense", "lua_ls", "rust_analyzer", "ts_ls"},
       })
     end
   },
@@ -60,6 +60,10 @@ require("lazy").setup({
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.cssls.setup({})
+      lspconfig.denols.setup({
+        on_attach = on_attach,
+        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+      })
       lspconfig.emmet_language_server.setup({
         filetypes = {
           "css",
@@ -70,6 +74,10 @@ require("lazy").setup({
           "pug",
           "sass",
           "scss",
+          "typescript",
+          "typescriptreact",
+          "javascriptreact",
+          "js",
           "twig"
         }
       })
@@ -77,9 +85,11 @@ require("lazy").setup({
       lspconfig.intelephense.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.rust_analyzer.setup({})
-      lspconfig.tsserver.setup({})
-
-      vim.cmd([[au BufRead,BufNewFile *.njk set filetype=html]])
+      lspconfig.ts_ls.setup({
+        on_attach = on_attach,
+        root_dir = lspconfig.util.root_pattern("package.json"),
+        single_file_support = false
+      })
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
