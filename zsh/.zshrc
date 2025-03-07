@@ -43,7 +43,7 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 # Quick Launch cht.sh
 bindkey -s ^s "cht.sh"
 
-PROMPT="%F{069}%n%f%F{0159}@%f%F{069}%m%f%F{159}:%f%F{049}[%~]%f%F{159}$%f "
+PROMPT="%F{4}%n%f%F{6}@%f%F{4}%m%f%F{6}:%f%F{14}[%~]%f%F{6}$%f "
 
 zstyle ':completion:*' list-colors 'di=1;34;'
 
