@@ -1,5 +1,0 @@
-- name: Clone Dotfiles Repository
-  ansible.builtin.git:
-    # Update this to use SSH auth
-    repo: "https://github.com/WilliamBirdsall/.dotfiles"
-    dest: "~/Projects/.dotfiles"

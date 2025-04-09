@@ -16,6 +16,7 @@ export PATH=$PATH:~/Projects/.dotfiles/bin/.local/scripts
 # Misc. Alias's
 alias sshps="ssh $PSHOST"
 alias ri="eval $(rbenv init -)"
+alias ff="fastfetch"
 
 # Program Alias's
 alias cat="bat"
