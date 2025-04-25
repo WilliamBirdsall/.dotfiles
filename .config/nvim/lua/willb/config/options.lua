@@ -16,3 +16,4 @@ vim.opt.incsearch = true
 vim.opt.colorcolumn = '80'
 vim.opt.nrformats = 'octal'
 vim.opt.bg = 'dark'
+vim.opt.cursorline = true

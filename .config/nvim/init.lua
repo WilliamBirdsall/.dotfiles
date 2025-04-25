@@ -1,6 +1,2 @@
-require('config/lazy')
-require('plugins/plugins')
-require('config/options')
-require('config/keymaps')
-require('config/statusline')
-require('config/funcs-and-augrps')
+require('willb.config')
+require('willb.lazy')
