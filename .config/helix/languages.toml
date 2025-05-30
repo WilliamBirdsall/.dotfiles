@@ -1,5 +1,7 @@
-[[language]]
+[language-server.emmet-ls]
+args = ["--stdio"]
+command="emmet-ls"
 
+[[language]]
 name = "html"
-file-types = ["html", "jsx", "tsx"]
-language-servers = ["vscode-html-language-server"]
+language-servers = ["vscode-html-language-server", "emmet-ls"]
