@@ -1,0 +1,5 @@
+[[language]]
+
+name = "html"
+file-types = ["html", "jsx", "tsx"]
+language-servers = ["vscode-html-language-server"]
