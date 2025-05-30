@@ -1,0 +1,19 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "block"
+select = "block"
+
+[editor.statusline]
+left = ["version-control", "file-name", "file-modification-indicator"]
+right = ["diagnostics", "selections", "file-type", "file-encoding", "position-percentage", "position"]
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
