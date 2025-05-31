@@ -1,11 +1,14 @@
 * {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .2);
   color: #eee;
   font-family: "JetBrainsMono Nerd Font";
   font-size: 1rem;
 }
 
+#clock,
 #cpu,
-#memory {
-  padding-right: 5px;
+#memory,
+#network,
+#pulseaudio {
+  padding-right: 1rem;
 }
