@@ -1,0 +1,57 @@
+{
+  "output": "DP-2",
+  "layer": "top",
+  "height": 35,
+  "spacing": 4,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["cpu", "memory", "network", "pulseaudio", "clock", "custom/power"],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "default": "",
+      "active": "",
+      "urgent": "",
+    }
+  },
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "Disconnected ",
+    "tooltip-format": "{ifname} ({ipaddr})",
+  },
+  "pulseaudio": {
+    "format": "{icon} {format_source}",
+    "format-bluetooth": "{icon} {format_source}",
+    "format-source": "",
+    "format-source-muted": "󰍭",
+    "format-icons": {
+        "headphone": "",
+    },
+    "on-click": "pavucontrol"
+  },
+  "clock": {
+    "format": " {:%b. %d %Y  %I:%M}"
+  },
+  "cpu": {
+    "format": " {usage}%"
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "custom/power": {
+    "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml",
+		"menu-actions": {
+      "lock": "hyprlock",
+			"suspend": "systemctl suspend",
+			"reboot": "reboot",
+			"shutdown": "shutdown"
+		}
+  },
+  "reload_style_on_change": true
+}
