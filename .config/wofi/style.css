@@ -1,0 +1,29 @@
+* {
+  border-radius: 5px;
+  border: none;
+}
+
+#window {
+  font-size: 1.2rem;
+  font-family: 'JetBrainsMono';
+  background-color: rgba(50, 50, 50, 0.0);
+  color: #eee;
+}
+
+#input {
+  background-color: rgba(50, 50, 50, 0.9);
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+#inner-box {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+
+#entry:selected {
+  background-color: #ddd;
+}
+
+#text:selected {
+  color: rgb(50, 50, 50);
+}
