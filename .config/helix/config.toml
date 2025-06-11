@@ -1,6 +1,7 @@
 theme = "gruvbox"
 
 [editor]
+bufferline = "multiple"
 line-number = "relative"
 mouse = false
 
